@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TipCalculatorActivity" >
+
+    <EditText
+        android:id="@+id/edtBillAmount"
+        style="@dimen/activity_horizontal_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/txtBillAmount"
+        android:ems="6"
+        android:inputType="numberDecimal"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/txtBillAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edtBillAmount"
+        android:layout_alignParentLeft="true"
+        android:text="@string/bill_amount" />
+
+    <CheckBox
+        android:id="@+id/chkRound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtBillAmount"
+        android:layout_alignRight="@+id/edtBillAmount"
+        android:layout_below="@+id/edtBillAmount"
+        android:layout_marginTop="20dp"
+        android:text="@string/round_tip" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtBillAmount"
+        android:layout_alignRight="@+id/edtBillAmount"
+        android:layout_below="@+id/chkRound"
+        android:layout_marginTop="20dp"
+        android:text="@string/button_calc" />
+
+    <TextView
+        android:id="@+id/txtTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtBillAmount"
+        android:layout_below="@+id/btnCalculate"
+        android:layout_marginTop="20dp"
+        android:text="@string/tip_text" />
+
+    <TextView
+        android:id="@+id/txtTipResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtTip"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/txtTip"
+        android:textIsSelectable="true" />
+
+</RelativeLayout>
