@@ -36,6 +36,7 @@
         android:layout_alignLeft="@+id/txtBillAmount"
         android:layout_alignRight="@+id/edtBillAmount"
         android:layout_below="@+id/edtBillAmount"
+        android:layout_marginLeft="-8dp"
         android:layout_marginTop="20dp"
         android:text="@string/round_tip" />
 
@@ -46,6 +47,8 @@
         android:layout_alignLeft="@+id/txtBillAmount"
         android:layout_alignRight="@+id/edtBillAmount"
         android:layout_below="@+id/chkRound"
+        android:layout_marginLeft="-5dp"
+        android:layout_marginRight="-5dp"
         android:layout_marginTop="20dp"
         android:text="@string/button_calc" />
 
