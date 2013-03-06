@@ -53,21 +53,12 @@
         android:text="@string/button_calc" />
 
     <TextView
-        android:id="@+id/txtTip"
+        android:id="@+id/txtTipResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/txtBillAmount"
         android:layout_below="@+id/btnCalculate"
         android:layout_marginTop="20dp"
-        android:text="@string/tip_text" />
-
-    <TextView
-        android:id="@+id/txtTipResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/txtTip"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@+id/txtTip"
         android:textIsSelectable="true" />
 
 </RelativeLayout>

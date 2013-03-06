@@ -6,6 +6,7 @@
     <string name="bill_amount">Bill Amount:</string>
     <string name="round_tip">Round to nearest dollar</string>
     <string name="button_calc">Calculate</string>
-    <string name="tip_text">Tip:</string>
+    <string name="tip_template">Tip: %s</string>
+    <item type="fraction" format="float" name="tip_percent">0.12</item>
 
 </resources>

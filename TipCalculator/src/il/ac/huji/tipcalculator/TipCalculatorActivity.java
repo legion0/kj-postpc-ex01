@@ -4,6 +4,7 @@ import java.util.Locale;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.res.Resources;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -14,8 +15,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class TipCalculatorActivity extends Activity {
-
-	private final double TIP_PERCENT = 0.12;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +40,10 @@ public class TipCalculatorActivity extends Activity {
 			String billAmountS = billAmountE.getText().toString();
 			Log.v("EditText", billAmountS);
 			if (!"".equals(billAmountS)) {
+				Resources res = getResources();
 				Double billAmount = Double.parseDouble(billAmountS);
-				Double tip = billAmount * TIP_PERCENT;
+				Float tipPercent = res.getFraction(R.fraction.tip_percent, 1, 1);
+				Double tip = billAmount * tipPercent;
 				CheckBox chkRound = (CheckBox) findViewById(R.id.chkRound);
 				Locale locale = Locale.getDefault();
 				String tipStr;
@@ -50,8 +51,9 @@ public class TipCalculatorActivity extends Activity {
 					tipStr = String.format(locale, "$%d", (int)Math.round(tip));
 				else
 					tipStr = String.format(locale, "$%.2f", tip);
+				String tipTemplate = res.getString(R.string.tip_template, tipStr);
 				TextView txtTipResult = (TextView) findViewById(R.id.txtTipResult);
-				txtTipResult.setText(tipStr);
+				txtTipResult.setText(tipTemplate);
 			}
 		};
 	};
