@@ -42,7 +42,7 @@ public class TipCalculatorActivity extends Activity {
 			if (!"".equals(billAmountS)) {
 				Resources res = getResources();
 				Double billAmount = Double.parseDouble(billAmountS);
-				Float tipPercent = res.getFraction(R.fraction.tip_percent, 1, 1);
+				Float tipPercent = Float.parseFloat(res.getString(R.string.tip_percent));
 				Double tip = billAmount * tipPercent;
 				CheckBox chkRound = (CheckBox) findViewById(R.id.chkRound);
 				Locale locale = Locale.getDefault();
